@@ -87,6 +87,8 @@ module OmniAuth
         OmniAuth::Utils.deep_merge(super, {
           'credentials' => {
             'token' => @access_token.token
+          }, 'extra' => {
+            'access_token' => @access_token
           }
         })
       end
